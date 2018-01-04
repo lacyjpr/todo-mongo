@@ -14,7 +14,7 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "yarn start --prefix client",
-    "dev": "concurrently \"yarn server\" \"yarn client\""
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
