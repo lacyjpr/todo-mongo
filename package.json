@@ -4,8 +4,8 @@
   "description": "Todo app with MongoDB",
   "main": "index.js",
   "engines": {
-    "node": "8.1.1",
-    "npm": "5.0.3"
+    "node": "8.9.3",
+    "npm": "5.5.1"
   },
   "author": "JP Lacy",
   "license": "MIT",
