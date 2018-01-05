@@ -15,7 +15,8 @@
     "server": "nodemon index.js",
     "client": "cd ./client && yarn start",
     "dev": "concurrently \"yarn server\" \"yarn client\"",
-    "heroku-postbuild": "cd ./client && yarn init && cd ./client && yarn build"
+    "heroku-postbuild":
+      "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
