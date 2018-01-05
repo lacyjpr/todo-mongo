@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server",
-    "build": "NODE_ENV=production webpack -p"
+    "build": "NODE_ENV=production webpack -p",
+    "heroku-postbuild":
+      "webpack -p --config ./webpack.prod.config.js --progress"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
