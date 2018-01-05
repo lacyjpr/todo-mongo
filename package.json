@@ -13,7 +13,7 @@
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
-    "client": "npm run start --prefix client",
+    "client": "cd ./client && yarn start",
     "dev": "concurrently \"yarn server\" \"yarn client\""
   },
   "dependencies": {
