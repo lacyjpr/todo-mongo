@@ -16,7 +16,7 @@
       },
       "sourceType": "module"
   },
-  parser: "babel-eslint",
+  "parser": "babel-eslint",
   "plugins": [
       "react"
   ],
