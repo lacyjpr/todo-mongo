@@ -19,10 +19,8 @@ const App = () => (
           <Link to="/about">About</Link>
         </li>
       </ul>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-      </Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
     </main>
   </BrowserRouter>
 );
