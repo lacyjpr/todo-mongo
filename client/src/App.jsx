@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 
-import Home from './containers/Home';
-import About from './containers/About';
+import Home from './components/Home';
+import About from './components/About';
 
 import reactLogo from './assets/React-icon.png';
 
