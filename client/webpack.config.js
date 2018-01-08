@@ -35,6 +35,16 @@ module.exports = {
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
+    proxy: {
+      '/auth/google': {
+        target: 'http://localhost:5000',
+        pathRewrite: { '^/auth/google': '' },
+      },
+      '/api/*': {
+        target: 'http://localhost:5000',
+        pathRewrite: { '^/api/*': '' },
+      },
+    },
   },
   entry: ['react-hot-loader/patch', path.join(__dirname, '/src/index.jsx')],
   module: {
