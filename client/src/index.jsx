@@ -21,14 +21,11 @@ import App from './App';
 
 import './style.scss';
 
-// const middleware = [thunk];
-// if (process.env.NODE_ENV !== 'production') middleware.push(logger);
-
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const enhancer = composeEnhancers(applyMiddleware(thunk));
 
-const store = createStore(reducer, enhancer);
+const store = createStore(reducer, {}, enhancer);
 
 const root = document.getElementById('root');
 
