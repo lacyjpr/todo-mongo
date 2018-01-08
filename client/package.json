@@ -5,14 +5,6 @@
   "main": "index.js",
   "author": "JP Lacy",
   "license": "MIT",
-  "proxy": {
-    "/auth/google": {
-      "target": "http://localhost:5000"
-    },
-    "/api/*": {
-      "target": "http://localhost:5000"
-    }
-  },
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server",
     "build": "NODE_ENV=production webpack -p"
