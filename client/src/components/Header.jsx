@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+import * as actions from '../actions';
+
 class Header extends Component {
   renderContent() {
     console.log(this.props.auth);
@@ -41,4 +43,4 @@ const mapStateToProps = state => ({
   auth: state.authReducer,
 });
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps, actions)(Header);

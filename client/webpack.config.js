@@ -40,7 +40,11 @@ module.exports = {
       '/auth/google': 'http://localhost:5000',
     },
   },
-  entry: ['react-hot-loader/patch', path.join(__dirname, '/src/index.jsx')],
+  entry: [
+    'react-hot-loader/patch',
+    'babel-polyfill',
+    path.join(__dirname, '/src/index.jsx'),
+  ],
   module: {
     loaders: [
       {

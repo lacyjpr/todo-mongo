@@ -12,12 +12,14 @@
   "private": false,
   "scripts": {
     "start": "node index.js",
-    "server": "nodemon index.js",
+    "server": "nodemon --verbose index.js",
     "client": "cd ./client && yarn start",
     "dev": "concurrently \"yarn server\" \"yarn client\"",
-    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild":
+      "npm install --prefix client && npm run build --prefix client"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "body-parser": "^1.18.2",
     "concurrently": "^3.5.1",
     "cookie-session": "^2.0.0-beta.3",
