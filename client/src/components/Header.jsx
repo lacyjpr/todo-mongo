@@ -6,7 +6,6 @@ import * as actions from '../actions';
 
 class Header extends Component {
   renderContent() {
-    console.log(this.props.auth);
     switch (this.props.auth) {
       case null:
         return;
@@ -36,9 +35,6 @@ class Header extends Component {
   }
 }
 
-// function mapStateToProps({ auth }) {
-//   return { auth };
-// }
 const mapStateToProps = state => ({
   auth: state.authReducer,
 });
