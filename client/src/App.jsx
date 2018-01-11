@@ -19,7 +19,6 @@ class App extends Component {
       <BrowserRouter>
         <main className="container">
           <Header />
-          <TodoApp />
           <ul className="left">
             <li>
               <Link to="/">Home</Link>
