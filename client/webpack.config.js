@@ -39,12 +39,16 @@ module.exports = {
       '/api/**': 'http://localhost:5000',
       '/auth/google': 'http://localhost:5000',
     },
+    historyApiFallback: true,
   },
   entry: [
     'react-hot-loader/patch',
     'babel-polyfill',
     path.join(__dirname, '/src/index.jsx'),
   ],
+  output: {
+    publicPath: '/',
+  },
   module: {
     loaders: [
       {

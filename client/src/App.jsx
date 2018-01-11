@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { Switch, BrowserRouter, Route, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import * as actions from './actions';
@@ -7,6 +7,7 @@ import * as actions from './actions';
 import Home from './components/Home';
 import About from './components/About';
 import Header from './components/Header';
+import TodoApp from './components/TodoApp';
 
 class App extends Component {
   componentDidMount() {
@@ -18,6 +19,7 @@ class App extends Component {
       <BrowserRouter>
         <main className="container">
           <Header />
+          <TodoApp />
           <ul className="left">
             <li>
               <Link to="/">Home</Link>
@@ -26,8 +28,11 @@ class App extends Component {
               <Link to="/about">About</Link>
             </li>
           </ul>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/todoapp" component={TodoApp} />
+          </Switch>
         </main>
       </BrowserRouter>
     );
