@@ -3,7 +3,7 @@ const { Schema } = require('schema');
 
 const todoSchema = new Schema({
   _user: { type: Schema.Types.ObjectIs, ref: 'User' },
-  todo: String,
+  item: String,
   createdAt: Date,
   completed: Boolean,
   completedAt: Date,
