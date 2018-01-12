@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const { Schema } = require('schema');
+const { Schema } = mongoose;
 
 const todoSchema = new Schema({
-  _user: { type: Schema.Types.ObjectIs, ref: 'User' },
+  _user: { type: Schema.Types.ObjectId, ref: 'User' },
   item: String,
   createdAt: Date,
   completed: Boolean,
