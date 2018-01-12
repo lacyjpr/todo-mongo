@@ -6,3 +6,16 @@ export const fetchTodos = () => async dispatch => {
 
   dispatch({ type: FETCH_TODOS, payload: res.data });
 };
+
+export const addTodo = item => dispatch => {
+  const todo = {
+    item,
+    createdAt: Date.now(),
+    completed: false,
+    completedAt: null,
+    edited: false,
+    editedAt: null,
+  };
+
+  axios.post('/api/todos', todo).then(dispatch(fetchTodos()));
+};
