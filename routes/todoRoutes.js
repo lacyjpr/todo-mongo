@@ -23,6 +23,6 @@ module.exports = app => {
     });
 
     await todo.save();
-    res.redirect('/todos');
+    res.redirect('/todoapp');
   });
 };

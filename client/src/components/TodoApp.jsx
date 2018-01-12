@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import * as actions from '../actions';
+import AddTodo from './AddTodo';
 
 class TodoApp extends Component {
   componentDidMount() {
@@ -10,7 +11,12 @@ class TodoApp extends Component {
   }
 
   render() {
-    return <div className="container">TodoApp.jsx</div>;
+    return (
+      <div className="container">
+        TodoApp.jsx
+        <AddTodo />
+      </div>
+    );
   }
 }
 
