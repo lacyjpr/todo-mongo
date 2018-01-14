@@ -1,10 +1,14 @@
 import axios from 'axios';
-import { FETCH_TODOS } from './types';
+import { FETCH_TODOS, ADD_NEW_TODO } from './types';
 
 export const fetchTodos = () => async dispatch => {
   const res = await axios.get('/api/todos');
 
   dispatch({ type: FETCH_TODOS, payload: res.data });
+};
+
+export const addNewTodo = newTodo => {
+  return { type: ADD_NEW_TODO, payload: newTodo };
 };
 
 export const addTodo = item => async dispatch => {
@@ -21,5 +25,5 @@ export const addTodo = item => async dispatch => {
   const newTodo = res.data.todo;
   console.log('newTodo', newTodo);
 
-  dispatch(fetchTodos());
+  dispatch(addNewTodo(newTodo));
 };
