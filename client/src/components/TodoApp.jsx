@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import * as actions from '../actions';
 import AddTodo from './AddTodo';
+import TodoList from './TodoList';
 
 class TodoApp extends Component {
   componentDidMount() {
@@ -15,13 +16,10 @@ class TodoApp extends Component {
       <div className="container">
         TodoApp.jsx
         <AddTodo />
+        <TodoList />
       </div>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  todos: state.todosReducer,
-});
-
-export default connect(mapStateToProps)(TodoApp);
+export default connect()(TodoApp);
