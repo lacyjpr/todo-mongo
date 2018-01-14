@@ -9,7 +9,7 @@ module.exports = {
 
     // Filter by searchText
     filteredTodos = filteredTodos.filter(todo => {
-      var text = todo.text.toLowerCase();
+      let text = todo.item.toLowerCase();
       return (
         searchText.length === 0 || text.indexOf(searchText.toLowerCase()) > -1
       );
