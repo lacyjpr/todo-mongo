@@ -10,7 +10,7 @@ class TodoList extends Component {
       if (this.props.todos.length === 0) {
         return <p>Nothing To Do</p>;
       }
-      return this.props.todos.reverse().map(todo => {
+      return this.props.todos.map(todo => {
         return <Todo key={todo._id} {...todo} />;
       });
     };
