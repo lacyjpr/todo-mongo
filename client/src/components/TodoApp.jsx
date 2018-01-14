@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import AddTodo from './AddTodo';
 import TodoList from './TodoList';
+import TodoSearch from './TodoSearch';
 
 class TodoApp extends Component {
   componentDidMount() {
@@ -16,6 +17,7 @@ class TodoApp extends Component {
       <div className="container">
         TodoApp.jsx
         <AddTodo />
+        <TodoSearch />
         <TodoList />
       </div>
     );
