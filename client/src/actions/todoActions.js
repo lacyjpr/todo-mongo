@@ -17,6 +17,9 @@ export const addTodo = item => async dispatch => {
     editedAt: null,
   };
 
-  await axios.post('/api/todos', todo);
+  const res = await axios.post('/api/todos', todo);
+  const newTodo = res.data.todo;
+  console.log('newTodo', newTodo);
+
   dispatch(fetchTodos());
 };

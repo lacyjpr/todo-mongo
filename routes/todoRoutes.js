@@ -23,6 +23,6 @@ module.exports = app => {
     });
 
     await todo.save();
-    res.send({});
+    res.json({ todo });
   });
 };
