@@ -58,6 +58,7 @@ class Todo extends Component {
 
   render() {
     let {
+      todo,
       _id,
       completed,
       createdAt,
@@ -92,7 +93,7 @@ class Todo extends Component {
             checked={completed}
             ref="toggler"
             onClick={() => {
-              dispatch(actions.startToggleTodo(_id, !completed));
+              dispatch(actions.startToggleTodo(_id, !completed, todo));
             }}
             onChange={() => {}}
           />
