@@ -6,6 +6,17 @@ export default function(state = [], action) {
       return action.payload;
     case actions.ADD_NEW_TODO:
       return [...state, action.payload];
+    case actions.UPDATE_TODO:
+      return state.map(todo => {
+        if (todo._id === action._id) {
+          return {
+            ...todo,
+            ...action.updates,
+          };
+        } else {
+          return todo;
+        }
+      });
     default:
       return state;
   }

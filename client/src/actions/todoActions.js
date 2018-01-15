@@ -29,7 +29,7 @@ export const addTodo = item => async dispatch => {
 };
 
 export const updateTodo = (_id, updates) => {
-  return { type: UPDATE_TODO, payload: _id, updates };
+  return { type: UPDATE_TODO, _id, updates };
 };
 
 export const startToggleTodo = (_id, completed) => async dispatch => {
