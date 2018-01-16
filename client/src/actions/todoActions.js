@@ -38,16 +38,21 @@ export const startToggleTodo = (_id, completed) => async dispatch => {
     completed,
     completedAt: Date.now(),
   };
-  await axios.put('/api/todos', updates);
+  const res = await axios.put('/api/todos', updates);
   dispatch(updateTodo(_id, updates));
+  const updatedTodo = res.data;
+  console.log(updatedTodo);
 };
 
 export const startSaveEditedTodo = (_id, item) => async dispatch => {
   const updates = {
+    _id,
     item,
     edited: true,
     editedAt: Date.now(),
   };
-  await axios.put('/api/todos', updates);
+  const res = await axios.put('/api/todos', updates);
   dispatch(updateTodo(_id, updates));
+  const updatedTodo = res.data;
+  console.log(updatedTodo);
 };
