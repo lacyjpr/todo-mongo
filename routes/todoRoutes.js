@@ -48,4 +48,17 @@ module.exports = app => {
       }
     );
   });
+
+  app.delete('/api/todos/:id', requireLogin, (req, res) => {
+    Todo.findByIdAndRemove(req.params.id, (err, _id) => {
+      if (err) {
+        return res.json({ success: false, message: 'Some Error' });
+      }
+
+      return res.json({
+        success: true,
+        message: _id + ' deleted successfully',
+      });
+    });
+  });
 };

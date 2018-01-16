@@ -8,5 +8,7 @@ export const ADD_NEW_TODO = 'ADD_NEW_TODO';
 export const SET_SEARCH_TEXT = 'SET_SEARCH_TEXT';
 // toggle show complete
 export const TOGGLE_SHOW_COMPLETED = 'TOGGLE_SHOW_COMPLETED';
-// updateTodo
+// update todo
 export const UPDATE_TODO = 'UPDATE_TODO';
+// delete todo
+export const DELETE_TODO = 'DELETE_TODO';

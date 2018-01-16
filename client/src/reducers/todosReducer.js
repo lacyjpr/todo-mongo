@@ -14,6 +14,10 @@ export default function(state = [], action) {
           return todo;
         }
       });
+    case actions.DELETE_TODO:
+      return state.filter(todo => {
+        return todo._id !== action._id;
+      });
     default:
       return state;
   }

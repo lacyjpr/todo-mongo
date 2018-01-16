@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_TODOS, ADD_NEW_TODO, UPDATE_TODO } from './types';
+import { FETCH_TODOS, ADD_NEW_TODO, UPDATE_TODO, DELETE_TODO } from './types';
 
 export const fetchTodos = () => async dispatch => {
   const res = await axios.get('/api/todos');
@@ -55,4 +55,15 @@ export const startSaveEditedTodo = (_id, item) => async dispatch => {
   dispatch(updateTodo(_id, updates));
   const updatedTodo = res.data;
   console.log(updatedTodo);
+};
+
+export const deleteTodo = _id => {
+  return { type: DELETE_TODO, _id };
+};
+
+export const startDeleteTodo = _id => async dispatch => {
+  const res = await axios.delete(`/api/todos/${_id}`);
+  dispatch(deleteTodo(_id));
+  const deletedTodo = res.data;
+  console.log(deletedTodo);
 };
