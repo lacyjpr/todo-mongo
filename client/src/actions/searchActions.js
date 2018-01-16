@@ -3,7 +3,7 @@ import { SET_SEARCH_TEXT, TOGGLE_SHOW_COMPLETED } from './types';
 export const setSearchText = searchText => {
   return {
     type: SET_SEARCH_TEXT,
-    payload: searchText,
+    searchText,
   };
 };
 
