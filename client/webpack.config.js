@@ -46,9 +46,6 @@ module.exports = {
     'babel-polyfill',
     path.join(__dirname, '/src/index.jsx'),
   ],
-  output: {
-    publicPath: '/',
-  },
   module: {
     loaders: [
       {
@@ -66,6 +63,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   output: {
+    publicPath: '/',
     filename: 'index.js',
     path: path.join(__dirname, '/build'),
   },
