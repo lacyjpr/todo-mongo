@@ -26,9 +26,7 @@ class Header extends Component {
   render() {
     return (
       <nav>
-        <div className="nav-wrapper">
-          <ul className="right">{this.renderContent()}</ul>
-        </div>
+        <div className="nav-wrapper">{this.renderContent()}</div>
       </nav>
     );
   }
