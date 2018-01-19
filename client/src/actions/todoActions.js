@@ -56,9 +56,7 @@ export const deleteTodo = _id => {
   return { type: DELETE_TODO, _id };
 };
 
-export const startDeleteTodo = _id => async dispatch => {
-  const res = await axios.delete(`/api/todos/${_id}`);
+export const startDeleteTodo = _id => dispatch => {
+  axios.delete(`/api/todos/${_id}`);
   dispatch(deleteTodo(_id));
-  const deletedTodo = res.data;
-  console.log(deletedTodo);
 };
