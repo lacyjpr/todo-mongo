@@ -16,7 +16,14 @@ class Todo extends Component {
   renderTodo() {
     let { item, completed } = this.props;
     if (this.state.editable && !completed) {
-      return <input type="text" defaultValue={item} ref="editTodoText" />;
+      return (
+        <input
+          className="input-edit-item"
+          type="text"
+          defaultValue={item}
+          ref="editTodoText"
+        />
+      );
     } else {
       return <p>{item}</p>;
     }
@@ -28,6 +35,7 @@ class Todo extends Component {
       if (!this.state.editable) {
         return (
           <button
+            className="btn-edit-todo"
             ref="editTodoBtn"
             onClick={() => {
               this.setState({ editable: !this.state.editable });
@@ -39,6 +47,7 @@ class Todo extends Component {
       } else {
         return (
           <button
+            className="btn-save-edited-todo"
             ref="saveEditBtn"
             onClick={() => {
               var newText = this.refs.editTodoText.value;
@@ -58,7 +67,6 @@ class Todo extends Component {
 
   render() {
     let {
-      todo,
       _id,
       completed,
       createdAt,
@@ -87,8 +95,9 @@ class Todo extends Component {
 
     return (
       <div className={todoClassName}>
-        <div>
+        <div className="toggle-completed">
           <input
+            className="toggle-completed-input"
             type="checkbox"
             checked={completed}
             ref="toggler"
@@ -100,12 +109,12 @@ class Todo extends Component {
         </div>
         <div>
           {this.renderTodo()}
-          <p className="todo_subtext">{renderDate()}</p>
+          <p className="todo-subtext">{renderDate()}</p>
         </div>
-        <div className="controls">
+        <div className="todo-controls">
           {this.renderButton()}
           <button
-            className="small expanded button alert hollow"
+            className="btn-delete-todo"
             ref="deleteTodoBtn"
             onClick={() => {
               dispatch(actions.startDeleteTodo(_id));

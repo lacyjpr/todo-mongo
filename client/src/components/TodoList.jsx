@@ -10,7 +10,7 @@ class TodoList extends Component {
     const renderTodos = () => {
       let filteredTodos = TodoAPI.filterTodos(todos, showCompleted, searchText);
       if (filteredTodos.length === 0) {
-        return <p>Nothing To Do</p>;
+        return <p className="no-todos">Nothing To Do</p>;
       }
       return filteredTodos.map(todo => {
         return <Todo key={todo._id} {...todo} />;

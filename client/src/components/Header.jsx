@@ -10,15 +10,15 @@ class Header extends Component {
         return;
       case false:
         return (
-          <li>
+          <div className="nav-login">
             <a href="/auth/google">Login With Google</a>
-          </li>
+          </div>
         );
       default:
         return (
-          <li>
+          <div className="nav-logout">
             <a href="api/logout">Logout</a>
-          </li>
+          </div>
         );
     }
   }
