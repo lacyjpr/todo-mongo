@@ -14,7 +14,7 @@ class TodoApp extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="todo-container">
         <h2>Todo List</h2>
         <AddTodo />
         <TodoSearch />
