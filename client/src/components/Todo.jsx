@@ -107,21 +107,23 @@ class Todo extends Component {
             onChange={() => {}}
           />
         </div>
-        <div>
+        <div className="todo-item">
           {this.renderTodo()}
           <p className="todo-subtext">{renderDate()}</p>
         </div>
         <div className="todo-controls">
-          {this.renderButton()}
-          <button
-            className="btn-delete-todo"
-            ref="deleteTodoBtn"
-            onClick={() => {
-              dispatch(actions.startDeleteTodo(_id));
-            }}
-          >
-            Delete
-          </button>
+          <div>{this.renderButton()}</div>
+          <div>
+            <button
+              className="btn-delete-todo"
+              ref="deleteTodoBtn"
+              onClick={() => {
+                dispatch(actions.startDeleteTodo(_id));
+              }}
+            >
+              Delete
+            </button>
+          </div>
         </div>
       </div>
     );
