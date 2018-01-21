@@ -112,8 +112,8 @@ class Todo extends Component {
           <p className="todo-subtext">{renderDate()}</p>
         </div>
         <div className="todo-controls">
-          <div>{this.renderButton()}</div>
-          <div>
+          <div className="todo-controls-edit-save">{this.renderButton()}</div>
+          <div className="todo-controls-delete">
             <button
               className="btn-delete-todo"
               ref="deleteTodoBtn"

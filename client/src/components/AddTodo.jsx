@@ -29,7 +29,9 @@ class AddTodo extends Component {
             ref="todoText"
             placeholder="What needs to be done?"
           />
-          <button className="btn-add-todo">Add Todo</button>
+          <div>
+            <button className="btn-add-todo">Add Todo</button>
+          </div>
         </form>
       </div>
     );
