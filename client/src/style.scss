@@ -16,6 +16,15 @@ p {
   margin: 1vh;
 }
 
+input:focus {
+  outline: none;
+  box-shadow: inset 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+input:hover {
+  background-color: $hover-background;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
