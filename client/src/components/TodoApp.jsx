@@ -34,4 +34,8 @@ class TodoApp extends Component {
   }
 }
 
-export default connect()(TodoApp);
+const mapStateToProps = state => ({
+  auth: state.authReducer,
+});
+
+export default connect(mapStateToProps)(TodoApp);
