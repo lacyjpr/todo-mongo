@@ -17,6 +17,11 @@ p {
   margin: 1vh;
 }
 
+input[type='text'] {
+  display: block;
+  margin: 0 auto;
+}
+
 input:focus {
   outline: none;
   -webkit-box-shadow: inset 0 1px 10px 0 rgba(0, 0, 0, 0.1);
@@ -119,7 +124,7 @@ nav {
     border-radius: 2px;
 
     .input-add-todo {
-      width: 294px;
+      width: 292px;
       height: 30px;
       font-size: 1em;
     }
@@ -147,7 +152,7 @@ nav {
     border-radius: 2px;
 
     .input-search-todos {
-      width: 294px;
+      width: 292px;
       height: 30px;
       font-size: 1em;
     }
