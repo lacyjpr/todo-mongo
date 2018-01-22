@@ -4,9 +4,16 @@ $hover-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.16);
 $hover-background: #fafafa;
 $light-color: #aaa;
 $light-blue: #3993f1;
+$dark-blue: #286ab1;
+$light-red: #f15139;
+$dark-red: #9f1b07;
+$light-green: #27c176;
+$dark-green: #25945e;
 $white: #ffffff;
 
 body {
+  padding: 0;
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -23,6 +30,11 @@ p {
 button {
   border-radius: 0;
   -webkit-appearance: none;
+  border: none;
+}
+
+button:focus {
+  outline: none;
 }
 
 input[type='text'] {
@@ -64,6 +76,7 @@ nav {
   display: grid;
   -ms-grid-columns: (1fr)[12];
   grid-template-columns: repeat(12, 1fr);
+  background-color: $light-blue;
 
   .nav-login {
     -ms-grid-column: 10;
@@ -72,6 +85,11 @@ nav {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
+    color: $white;
+    a {
+      color: $white;
+      text-decoration: none;
+    }
   }
 
   .nav-logout {
@@ -81,6 +99,10 @@ nav {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
+    a {
+      color: $white;
+      text-decoration: none;
+    }
   }
 }
 
@@ -150,6 +172,10 @@ nav {
       color: $white;
       font-size: 1em;
     }
+
+    .btn-add-todo:active {
+      background-color: $dark-blue;
+    }
   }
 
   .add-todo:hover {
@@ -178,6 +204,10 @@ nav {
       width: 282px;
       height: 30px;
       font-size: 1em;
+    }
+
+    .show-completed {
+      margin-left: 5px;
     }
   }
 
@@ -225,6 +255,13 @@ nav {
         font-size: 0.65em;
       }
 
+      .input-edit-item {
+        width: 146px;
+        height: 18px;
+        margin: 5px;
+        font-size: 0.95em;
+      }
+
       .todo-controls {
         display: -ms-grid;
         display: grid;
@@ -241,6 +278,28 @@ nav {
         align-self: center;
       }
 
+      .btn-edit-todo {
+        width: 48px;
+        height: 20px;
+        background-color: $light-blue;
+        color: $white;
+      }
+
+      .btn-edit-todo:active {
+        background-color: $dark-blue;
+      }
+
+      .btn-save-edited-todo {
+        width: 48px;
+        height: 20px;
+        background-color: $light-green;
+        color: $white;
+      }
+
+      .btn-save-edited-todo:active {
+        background-color: $dark-green;
+      }
+
       .todo-controls-delete {
         -ms-grid-row: 2;
         -ms-grid-row-span: 1;
@@ -250,6 +309,17 @@ nav {
         -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+      }
+
+      .btn-delete-todo {
+        width: 48px;
+        height: 20px;
+        background-color: $light-red;
+        color: $white;
+      }
+
+      .btn-delete-todo:active {
+        background-color: $dark-red;
       }
     }
 

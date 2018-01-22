@@ -21,7 +21,7 @@ class TodoSearch extends Component {
             }}
           />
         </div>
-        <div>
+        <div className="show-completed">
           <input
             type="checkbox"
             ref="showCompleted"
@@ -30,7 +30,7 @@ class TodoSearch extends Component {
               dispatch(actions.toggleShowCompleted());
             }}
           />
-          Show completed todos
+          Show Completed
         </div>
       </div>
     );
