@@ -11,7 +11,7 @@ class TodoSearch extends Component {
         <div>
           <input
             className="input-search-todos"
-            type="search"
+            type="text"
             ref="searchText"
             placeholder="Search todos"
             value={searchText}
