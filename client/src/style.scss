@@ -2,6 +2,9 @@ $primary-border: 1px solid #cdcdcd;
 $primary-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
 $hover-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.16);
 $hover-background: #fafafa;
+$light-color: #aaa;
+$light-blue: #3993f1;
+$white: #ffffff;
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -17,8 +20,16 @@ p {
   margin: 1vh;
 }
 
+button {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
 input[type='text'] {
   display: block;
+  border-radius: 0;
+  padding: 0;
+  border-width: 1px;
   margin: 0 auto;
 }
 
@@ -109,6 +120,7 @@ nav {
   }
 
   .add-todo {
+    padding: 1rem 0 1rem 0;
     -ms-grid-column: 1;
     -ms-grid-column-span: 9;
     grid-column: 1 / 10;
@@ -128,6 +140,16 @@ nav {
       height: 30px;
       font-size: 1em;
     }
+
+    .btn-add-todo {
+      display: block;
+      margin: 0 auto;
+      width: 284px;
+      height: 32px;
+      background-color: $light-blue;
+      color: $white;
+      font-size: 1em;
+    }
   }
 
   .add-todo:hover {
@@ -137,6 +159,7 @@ nav {
   }
 
   .container-search-todos {
+    padding: 1rem 0 1rem 0;
     -ms-grid-column: 1;
     -ms-grid-column-span: 9;
     grid-column: 1 / 10;
@@ -234,6 +257,13 @@ nav {
       -webkit-box-shadow: $hover-box-shadow;
       box-shadow: $hover-box-shadow;
       background-color: $hover-background;
+    }
+
+    .todo-completed {
+      p {
+        color: $light-color;
+        text-decoration: line-through;
+      }
     }
   }
 }
