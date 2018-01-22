@@ -123,12 +123,13 @@ nav {
     grid-gap: 1vh;
 
     .todo {
-      padding: 1rem;
+      padding: 1rem 0 1rem 0;
       display: grid;
       grid-template-columns: 1fr 5fr 2fr;
       border: $primary-border;
       box-shadow: $primary-box-shadow;
       border-radius: 2px;
+      width: 300px;
 
       .toggle-completed {
         justify-self: center;
