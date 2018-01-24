@@ -27,7 +27,6 @@ module.exports = app => {
   });
 
   app.put('/api/todos', requireLogin, (req, res) => {
-    console.log(req.body);
     Todo.findOneAndUpdate(
       { _id: req.body._id },
       req.body,
