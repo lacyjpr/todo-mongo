@@ -35,7 +35,7 @@ class Todo extends Component {
       if (!this.state.editable) {
         return (
           <button
-            className="btn-edit-todo"
+            className="todo__controls--edit-btn"
             ref="editTodoBtn"
             onClick={() => {
               this.setState({ editable: !this.state.editable });
@@ -47,7 +47,7 @@ class Todo extends Component {
       } else {
         return (
           <button
-            className="btn-save-edited-todo"
+            className="todo__controls--save-btn"
             ref="saveEditBtn"
             onClick={() => {
               var newText = this.refs.editTodoText.value;
@@ -114,7 +114,7 @@ class Todo extends Component {
           <div className="todo__controls-edit-save">{this.renderButton()}</div>
           <div className="todo__controls-delete">
             <button
-              className="btn-delete-todo"
+              className="todo__controls--delete-btn"
               ref="deleteTodoBtn"
               onClick={() => {
                 dispatch(actions.startDeleteTodo(_id));

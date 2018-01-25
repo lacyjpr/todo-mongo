@@ -283,25 +283,25 @@ input[type='checkbox']:checked {
       align-self: center;
     }
 
-    .btn-edit-todo {
+    &__controls--edit-btn {
       width: 48px;
       height: 20px;
       background-color: $light-blue;
       color: $white;
     }
 
-    .btn-edit-todo:active {
+    &__controls--edit-btn:active {
       background-color: $dark-blue;
     }
 
-    .btn-save-edited-todo {
+    &__controls--save-btn {
       width: 48px;
       height: 20px;
       background-color: $light-green;
       color: $white;
     }
 
-    .btn-save-edited-todo:active {
+    &__controls--save-btn:active {
       background-color: $dark-green;
     }
 
@@ -316,14 +316,14 @@ input[type='checkbox']:checked {
       align-self: center;
     }
 
-    .btn-delete-todo {
+    &__controls--delete-btn {
       width: 48px;
       height: 20px;
       background-color: $light-red;
       color: $white;
     }
 
-    .btn-delete-todo:active {
+    &__controls--delete-btn:active {
       background-color: $dark-red;
     }
   }
