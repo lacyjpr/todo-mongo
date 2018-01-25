@@ -10,13 +10,13 @@ class Header extends Component {
         return;
       case false:
         return (
-          <div className="nav-login">
+          <div className="nav__login">
             <a href="/auth/google">Login With Google</a>
           </div>
         );
       default:
         return (
-          <div className="nav-logout">
+          <div className="nav__logout">
             <a href="api/logout">Logout</a>
           </div>
         );
@@ -24,7 +24,7 @@ class Header extends Component {
   }
 
   render() {
-    return <nav>{this.renderContent()}</nav>;
+    return <nav className="nav">{this.renderContent()}</nav>;
   }
 }
 

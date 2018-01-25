@@ -18,7 +18,7 @@ class Todo extends Component {
     if (this.state.editable && !completed) {
       return (
         <input
-          className="input-edit-item"
+          className="todo__item--edit-item-input"
           type="text"
           defaultValue={item}
           ref="editTodoText"
@@ -75,7 +75,7 @@ class Todo extends Component {
       editedAt,
       dispatch,
     } = this.props;
-    let todoClassName = completed ? 'todo todo-completed' : 'todo';
+    let todoClassName = completed ? 'todo todo--completed' : 'todo';
     const renderDate = () => {
       let message = 'Created ';
       let timestamp = createdAt;
@@ -95,9 +95,8 @@ class Todo extends Component {
 
     return (
       <div className={todoClassName}>
-        <div className="toggle-completed">
+        <div className="todo__toggle-completed">
           <input
-            className="toggle-completed-input"
             type="checkbox"
             checked={completed}
             ref="toggler"
@@ -107,13 +106,13 @@ class Todo extends Component {
             onChange={() => {}}
           />
         </div>
-        <div className="todo-item">
+        <div className="todo__item">
           {this.renderTodo()}
-          <p className="todo-subtext">{renderDate()}</p>
+          <p className="todo__item--subtext">{renderDate()}</p>
         </div>
-        <div className="todo-controls">
-          <div className="todo-controls-edit-save">{this.renderButton()}</div>
-          <div className="todo-controls-delete">
+        <div className="todo__controls">
+          <div className="todo__controls-edit-save">{this.renderButton()}</div>
+          <div className="todo__controls-delete">
             <button
               className="btn-delete-todo"
               ref="deleteTodoBtn"

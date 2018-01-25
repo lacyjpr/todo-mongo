@@ -16,7 +16,7 @@ class TodoList extends Component {
         return <Todo key={todo._id} {...todo} />;
       });
     };
-    return <div className="todo-list-container">{renderTodos()}</div>;
+    return <div className="todo-list">{renderTodos()}</div>;
   }
 }
 

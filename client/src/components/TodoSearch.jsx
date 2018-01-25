@@ -7,10 +7,10 @@ class TodoSearch extends Component {
     let { dispatch, showCompleted, searchText } = this.props;
 
     return (
-      <div className="container-search-todos">
+      <div className="search-todos">
         <div>
           <input
-            className="input-search-todos"
+            className="search-todos__input"
             type="text"
             ref="searchText"
             placeholder="Search todos"
@@ -21,7 +21,7 @@ class TodoSearch extends Component {
             }}
           />
         </div>
-        <div className="show-completed">
+        <div className="search-todos__show-completed">
           <input
             type="checkbox"
             ref="showCompleted"

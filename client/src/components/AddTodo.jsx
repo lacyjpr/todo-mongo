@@ -24,13 +24,13 @@ class AddTodo extends Component {
       <div className="add-todo">
         <form onSubmit={this.handleSubmit}>
           <input
-            className="input-add-todo"
+            className="add-todo__input"
             type="text"
             ref="todoText"
             placeholder="What needs to be done?"
           />
           <div>
-            <button className="btn-add-todo">Add Todo</button>
+            <button className="add-todo__btn">Add Todo</button>
           </div>
         </form>
       </div>
