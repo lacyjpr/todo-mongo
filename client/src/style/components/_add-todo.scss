@@ -1,0 +1,42 @@
+.add-todo {
+  padding: 1rem 0 1rem 0;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-column: 1 / 10;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column-align: center;
+  justify-self: center;
+  width: 300px;
+  border: $primary-border;
+  -webkit-box-shadow: $primary-box-shadow;
+  box-shadow: $primary-box-shadow;
+  border-radius: 2px;
+
+  &__input {
+    width: 282px;
+    height: 30px;
+    font-size: 1em;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    width: 284px;
+    height: 32px;
+    background-color: $light-blue;
+    color: $white;
+    font-size: 1em;
+  }
+
+  &__btn:active {
+    background-color: $dark-blue;
+  }
+
+  &:hover {
+    -webkit-box-shadow: $hover-box-shadow;
+    box-shadow: $hover-box-shadow;
+    background-color: $hover-background;
+  }
+}

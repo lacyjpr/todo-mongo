@@ -19,7 +19,7 @@ import thunk from 'redux-thunk';
 import reducer from './reducers';
 import App from './App';
 
-import './style.scss';
+import './style/style.scss';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

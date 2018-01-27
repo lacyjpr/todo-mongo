@@ -1,0 +1,119 @@
+.todo-list {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-column: 1 / 10;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  -ms-grid-column-align: center;
+  justify-self: center;
+  width: 300px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1vh;
+
+  .todo {
+    padding: 1rem 0 1rem 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 5fr 2fr;
+    grid-template-columns: 1fr 5fr 2fr;
+    border: $primary-border;
+    -webkit-box-shadow: $primary-box-shadow;
+    box-shadow: $primary-box-shadow;
+    border-radius: 2px;
+    width: 300px;
+
+    &__toggle-completed {
+      -ms-grid-column-align: center;
+      justify-self: center;
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+    }
+
+    &__item--subtext {
+      font-size: 0.65em;
+    }
+
+    &__item--edit-item-input {
+      width: 146px;
+      height: 18px;
+      margin: 5px;
+      font-size: 0.95em;
+    }
+
+    &__controls {
+      display: -ms-grid;
+      display: grid;
+    }
+
+    &__controls-edit-save {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      grid-row: 1 / 2;
+      -ms-grid-column-align: center;
+      justify-self: center;
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+    }
+
+    &__controls--edit-btn {
+      width: 48px;
+      height: 20px;
+      background-color: $light-blue;
+      color: $white;
+    }
+
+    &__controls--edit-btn:active {
+      background-color: $dark-blue;
+    }
+
+    &__controls--save-btn {
+      width: 48px;
+      height: 20px;
+      background-color: $light-green;
+      color: $white;
+    }
+
+    &__controls--save-btn:active {
+      background-color: $dark-green;
+    }
+
+    &__controls-delete {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      grid-row: 2 / 3;
+      -ms-grid-column-align: center;
+      justify-self: center;
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+    }
+
+    &__controls--delete-btn {
+      width: 48px;
+      height: 20px;
+      background-color: $light-red;
+      color: $white;
+    }
+
+    &__controls--delete-btn:active {
+      background-color: $dark-red;
+    }
+
+    &:hover {
+      -webkit-box-shadow: $hover-box-shadow;
+      box-shadow: $hover-box-shadow;
+      background-color: $hover-background;
+    }
+  }
+
+  .todo--completed {
+    p {
+      color: $light-color;
+      text-decoration: line-through;
+    }
+  }
+}
