@@ -1,0 +1,13 @@
+.home {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  display: -ms-grid;
+  display: grid;
+  margin: 0 auto;
+
+  h2 {
+    -ms-grid-column-align: center;
+    justify-self: center;
+  }
+}
