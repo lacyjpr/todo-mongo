@@ -1,21 +1,12 @@
 .todo-container {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
   grid-column: 1 / 13;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[9];
   grid-template-columns: repeat(9, 1fr);
   grid-gap: 1vh;
 
   h2 {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 9;
     grid-column: 1 / 10;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
     grid-row: 1 / 2;
-    -ms-grid-column-align: center;
     justify-self: center;
   }
 }

@@ -47,11 +47,8 @@ input[type='checkbox']:checked {
 }
 
 .container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[12];
   grid-template-columns: repeat(12, 1fr);
-  -ms-grid-rows: (minmax(50px, auto))[2];
   grid-template-rows: repeat(2, minmax(50px, auto));
   margin: 0 auto;
 }

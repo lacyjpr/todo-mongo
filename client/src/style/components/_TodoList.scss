@@ -1,22 +1,14 @@
 .todo-list {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 9;
   grid-column: 1 / 10;
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 1;
   grid-row: 4 / 5;
-  -ms-grid-column-align: center;
   justify-self: center;
   width: 300px;
-  display: -ms-grid;
   display: grid;
   grid-gap: 1vh;
 
   .todo {
     padding: 1rem 0 1rem 0;
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 5fr 2fr;
     grid-template-columns: 1fr 5fr 2fr;
     border: $primary-border;
     -webkit-box-shadow: $primary-box-shadow;
@@ -25,10 +17,7 @@
     width: 300px;
 
     &__toggle-completed {
-      -ms-grid-column-align: center;
       justify-self: center;
-      -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
     }
 
@@ -44,18 +33,12 @@
     }
 
     &__controls {
-      display: -ms-grid;
       display: grid;
     }
 
     &__controls-edit-save {
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 1;
       grid-row: 1 / 2;
-      -ms-grid-column-align: center;
       justify-self: center;
-      -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
     }
 
@@ -82,13 +65,8 @@
     }
 
     &__controls-delete {
-      -ms-grid-row: 2;
-      -ms-grid-row-span: 1;
       grid-row: 2 / 3;
-      -ms-grid-column-align: center;
       justify-self: center;
-      -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
     }
 

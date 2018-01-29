@@ -1,0 +1,5 @@
+@mixin no-grid {
+  @supports not (display: grid) {
+    @content;
+  }
+}

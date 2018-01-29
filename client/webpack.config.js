@@ -40,6 +40,7 @@ module.exports = {
       '/auth/google': 'http://localhost:5000',
     },
     historyApiFallback: true,
+    disableHostCheck: true,
   },
   entry: [
     'react-hot-loader/patch',
